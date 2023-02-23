@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#"
+     xml:base="http://www.semanticweb.org/jinxu/ontologies/2023/1/University"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:University="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#age -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#age"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/geekcode -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/geekcode"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/gender -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/gender"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/knows"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studies">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#first_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#first_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#last_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#last_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#staffID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#staffID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule"/>
+        <rdfs:comment xml:lang="en">One of the module in Computer Science.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science course 101</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS103">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule"/>
+        <rdfs:comment xml:lang="en">One of the module in Computer Science.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science course 103</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS103"/>
+        <teaches rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456</staffID>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+        <rdfs:comment xml:lang="en">This is a lecturer.</rdfs:comment>
+        <foaf:knows rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer"/>
+        <teaches rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS101"/>
+        <teaches rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor</last_name>
+        <staffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">456321</staffID>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
+        <rdfs:comment xml:lang="en">This is a lecturer.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M201 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M201">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule"/>
+        <rdfs:comment xml:lang="en">One of the module in Math.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mathematics course 201</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M204 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M204">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule"/>
+        <rdfs:comment xml:lang="en">One of the module in Math.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mathematics course 204</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student"/>
+        <studies rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS101"/>
+        <studies rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M204"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301978</studentID>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+        <foaf:geekcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GED/J d-- s:++&gt;: a-- C++(++++) ULU++ P+ L++ E---- W+(-) N+++ o+ K+++ w--- O- M+ V-- PS++&gt;$ PE++&gt;$ Y++ PGP++ t- 5+++ X++ R+++&gt;$ tv+ b+ DI+++ D+++ G++++ e++ h r-- y++**</foaf:geekcode>
+        <foaf:knows rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student"/>
+        <studies rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M201"/>
+        <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carry</first_name>
+        <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim</last_name>
+        <studentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301912</studentID>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</age>
+        <foaf:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</foaf:gender>
+        <foaf:knows rdf:resource="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
