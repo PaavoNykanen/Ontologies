@@ -1,0 +1,202 @@
+@prefix : <http://www.semanticweb.org/jinxu/ontologies/2023/1/University#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jinxu/ontologies/2023/1/University> .
+
+<http://www.semanticweb.org/jinxu/ontologies/2023/1/University> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#age
+:age rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/geekcode
+<http://xmlns.com/foaf/0.1/geekcode> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/gender
+<http://xmlns.com/foaf/0.1/gender> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/knows
+<http://xmlns.com/foaf/0.1/knows> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studies
+:studies rdf:type owl:ObjectProperty ;
+         rdfs:domain :Student ;
+         rdfs:range :Module .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#teaches
+:teaches rdf:type owl:ObjectProperty ;
+         rdfs:domain :Lecturer ;
+         rdfs:range :Module .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#first_name
+:first_name rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Person ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#last_name
+:last_name rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Person ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#staffID
+:staffID rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Lecturer ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#studentID
+:studentID rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Student ;
+           rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CSModule
+:CSModule rdf:type owl:Class ;
+          rdfs:subClassOf :Module .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer
+:Lecturer rdf:type owl:Class ;
+          rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#MathModule
+:MathModule rdf:type owl:Class ;
+            rdfs:subClassOf :Module .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Module
+:Module rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student
+:Student rdf:type owl:Class ;
+         rdfs:subClassOf :Person .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS101
+:CS101 rdf:type owl:NamedIndividual ,
+                :CSModule ;
+       rdfs:comment "One of the module in Computer Science."@en ;
+       rdfs:seeAlso "computer science course 101"^^xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#CS103
+:CS103 rdf:type owl:NamedIndividual ,
+                :CSModule ;
+       rdfs:comment "One of the module in Computer Science."@en ;
+       rdfs:seeAlso "computer science course 103"^^xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer1
+:Lecturer1 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :teaches :CS103 ,
+                    :M201 ;
+           :first_name "Lisa"^^xsd:string ;
+           :last_name "Lee"^^xsd:string ;
+           :staffID 123456 ;
+           :age 42 ;
+           rdfs:comment "This is a lecturer."@en ;
+           <http://xmlns.com/foaf/0.1/knows> :Lecturer2 .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Lecturer2
+:Lecturer2 rdf:type owl:NamedIndividual ,
+                    :Lecturer ;
+           :teaches :CS101 ,
+                    :M204 ;
+           :first_name "Mike"^^xsd:string ;
+           :last_name "Taylor"^^xsd:string ;
+           :staffID 456321 ;
+           :age 40 ;
+           rdfs:comment "This is a lecturer."@en .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M201
+:M201 rdf:type owl:NamedIndividual ,
+               :MathModule ;
+      rdfs:comment "One of the module in Math."@en ;
+      rdfs:seeAlso "mathematics course 201"^^xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#M204
+:M204 rdf:type owl:NamedIndividual ,
+               :MathModule ;
+      rdfs:comment "One of the module in Math."@en ;
+      rdfs:seeAlso "mathematics course 204"^^xsd:string .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student1
+:Student1 rdf:type owl:NamedIndividual ,
+                   :Student ;
+          :studies :CS101 ,
+                   :M204 ;
+          :first_name "Christopher"^^xsd:string ;
+          :last_name "Maria"^^xsd:string ;
+          :studentID 301978 ;
+          :age 20 ;
+          <http://xmlns.com/foaf/0.1/geekcode> "GED/J d-- s:++>: a-- C++(++++) ULU++ P+ L++ E---- W+(-) N+++ o+ K+++ w--- O- M+ V-- PS++>$ PE++>$ Y++ PGP++ t- 5+++ X++ R+++>$ tv+ b+ DI+++ D+++ G++++ e++ h r-- y++**"^^xsd:string ;
+          <http://xmlns.com/foaf/0.1/knows> :Student2 .
+
+
+###  http://www.semanticweb.org/jinxu/ontologies/2023/1/University#Student2
+:Student2 rdf:type owl:NamedIndividual ,
+                   :Student ;
+          :studies :M201 ;
+          :first_name "Carry"^^xsd:string ;
+          :last_name "Kim"^^xsd:string ;
+          :studentID 301912 ;
+          :age 21 ;
+          <http://xmlns.com/foaf/0.1/gender> "male"^^xsd:string ;
+          <http://xmlns.com/foaf/0.1/knows> :Student1 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CSModule
+                :Lecturer
+                :MathModule
+                :Student
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
